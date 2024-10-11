@@ -2,9 +2,9 @@ name: Test
 
 on:
   push:
-    branch: [main]
+    branch: [ main ]
   pull_request:
-    branches: [main]
+    branches: [ main ]
 
 env:
   CI: "true"
@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js 20
-        uses: action/setup-node@v1
-        with:
-          node-version: 20
-      - run: npm install
-      - run: run test
+    - uses: actions/checkout@v2
+    - name: Use Node.js 20 
+      uses: actions/setup-node@v1
+      with:
+        node-version: 20
+    - run: npm install
+    - run: npm run test
