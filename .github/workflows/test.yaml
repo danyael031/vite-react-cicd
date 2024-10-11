@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js 20
-        use: cation/setup-node@v1
+        uses: action/setup-node@v1
         with:
           node-version: 20
       - run: npm install
